@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scrum × Git — Team Demo</title>
+
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/members.css" />
+  <link rel="stylesheet" href="css/tech.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="#" class="logo">
+        <span class="logo__mark">⎇</span>
+        <span class="logo__text">TeamGit</span>
+      </a>
+      <nav class="nav" id="nav">
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__list" id="navList">
+          <li><a href="#hero" class="nav__link">Home</a></li>
+          <li><a href="#members" class="nav__link">Members</a></li>
+          <li><a href="#tech" class="nav__link">Tech</a></li>
+          <li><a href="#footer" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container hero__inner">
+        <p class="hero__eyebrow">Week 1 · Demo Project</p>
+        <h1 class="hero__title">Scrum × Git</h1>
+        <p class="hero__subtitle">
+          Một dự án nhỏ minh hoạ cách team kết hợp <strong>Scrum</strong> và <strong>Git</strong>
+          để cộng tác hiệu quả — từ branch, commit, pull request đến xử lý conflict.
+        </p>
+        <div class="hero__actions">
+          <a href="#members" class="btn btn--primary">Xem nhóm</a>
+          <a href="#tech" class="btn btn--ghost">Khám phá</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="members" class="members">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-head__title">Team Members</h2>
+          <p class="section-head__sub">4 thành viên — cùng nhau làm chủ Scrum &amp; Git</p>
+        </header>
+        <div class="members__grid" id="membersGrid">
+          <!-- Member cards rendered by js/members-render.js -->
+        </div>
+      </div>
+    </section>
+
+    <section id="tech" class="tech">
+      <div class="container tech__grid">
+        <article class="tech__card tech__card--scrum">
+          <div class="tech__icon">📋</div>
+          <h3 class="tech__title">Scrum</h3>
+          <p class="tech__desc">
+            Khung quy trình phát triển lặp — chia thành các Sprint ngắn,
+            có Daily Standup, Sprint Review và Retrospective.
+          </p>
+          <ul class="tech__list">
+            <li>Sprint Planning</li>
+            <li>Daily Standup</li>
+            <li>Sprint Review</li>
+            <li>Retrospective</li>
+          </ul>
+        </article>
+
+        <article class="tech__card tech__card--git">
+          <div class="tech__icon">⎇</div>
+          <h3 class="tech__title">Git</h3>
+          <p class="tech__desc">
+            Hệ thống quản lý phiên bản phân tán — cho phép nhiều người
+            cùng sửa một codebase mà không "đè" lên nhau.
+          </p>
+          <ul class="tech__list">
+            <li>Branch &amp; Merge</li>
+            <li>Pull Request</li>
+            <li>Conflict Resolution</li>
+            <li>Restore &amp; Stash</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="site-footer__copy">© 2026 TeamGit · Demo for Scrum + Git Week 1</p>
+      <ul class="site-footer__links">
+        <li><a href="#">GitHub</a></li>
+        <li><a href="#">Jira</a></li>
+        <li><a href="#">SourceTree</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

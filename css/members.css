@@ -1,0 +1,70 @@
+/* ============================================================
+   members.css — Team members section
+   ============================================================ */
+
+.members {
+  background: var(--bg);
+}
+
+.members__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-6);
+}
+
+.member-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8) var(--space-6);
+  text-align: center;
+  transition: transform var(--transition-base),
+              box-shadow var(--transition-base),
+              border-color var(--transition-base);
+}
+
+.member-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-light);
+}
+
+.member-card__avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: var(--radius-full);
+  margin: 0 auto var(--space-4);
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+}
+
+.member-card__name {
+  font-size: 1.2rem;
+  margin-bottom: var(--space-1);
+}
+
+.member-card__role {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: var(--space-4);
+}
+
+.member-card__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  justify-content: center;
+}
+
+.member-card__skill {
+  font-size: 0.75rem;
+  padding: var(--space-1) var(--space-3);
+  background: var(--bg-alt);
+  color: var(--text-muted);
+  border-radius: var(--radius-full);
+  font-weight: 500;
+}

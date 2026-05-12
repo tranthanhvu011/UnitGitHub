@@ -1,0 +1,15 @@
+.DS_Store
+node_modules/
+*.log
+.env
+.vscode/
+.idea/
+
+# Editor backup files
+*~
+*.swp
+*.swo
+
+# Chỉ dùng nội bộ, không cần push lên repo
+docs/
+scripts/

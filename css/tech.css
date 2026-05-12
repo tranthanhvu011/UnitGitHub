@@ -1,0 +1,80 @@
+/* ============================================================
+   tech.css — Tech section (Scrum + Git cards)
+   ============================================================ */
+
+.tech {
+  background: var(--bg-alt);
+}
+
+.tech__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+}
+
+.tech__card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-sm);
+  border-top: 4px solid var(--primary);
+  transition: transform var(--transition-base),
+              box-shadow var(--transition-base);
+}
+
+.tech__card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.tech__card--git {
+  border-top-color: var(--accent);
+}
+
+.tech__icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-4);
+}
+
+.tech__title {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-3);
+}
+
+.tech__desc {
+  color: var(--text-muted);
+  margin-bottom: var(--space-6);
+}
+
+.tech__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.tech__list li {
+  position: relative;
+  padding-left: var(--space-6);
+  color: var(--text);
+  font-weight: 500;
+}
+
+.tech__list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-full);
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.tech__card--git .tech__list li::before {
+  background: var(--accent);
+}
